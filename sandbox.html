@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* Add some styling for the header and menu */
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin: 20px 0;
+      color: #006699;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    li span{
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+    input[type="number"]{
+        width: 100px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        font-size: 1.2em;
+        background-color: #e6e6e6;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+    }
+    #total{
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dyson Sphere Program Calculator</h1>
+
+  <ul>
+    <li>
+      <span>Iron Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Iron_Ingot">
+    </li>
+    <li>
+      <span>Copper Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Copper_Ingot">
+    </li>
+    <li>
+      <span>Steel</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Steel">
+    </li>
+    <li>
+      <span>Menu Item 4</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="item4">
+    </li>
+  </ul>
+  
+  <div id="total"></div>
+
+  <script>
+    function calculateTotal(){
+      // Get the values for Iron Ingots
+      var Iron_Ingot = document.getElementById("Iron_Ingot").value;
+      // Get the values for Copper Ingots
+      var Copper_Ingot = document.getElementById("Copper_Ingot").value;
+      // Get the values for Steel
+      var Steel = document.getElementById("Steel").value;
+
+
+      // set the price for iron ingots
+      var Iron_Ore = Iron_Ingot * 1;
+      var Iron_Ingot_Machines = Iron_Ingot * 1;
+      // set the price for copper ingots
+      var Copper_Ore = Copper_Ingot * 1;
+      var Copper_Ingot_Machines = Copper_Ingot * 1;
+      //set the price for steel
+      var Steel_Iron_Ingot = Steel * 3
+      var Steel_Iron_Ore = Steel_Iron_Ingot
+      var Steel_Machines = Steel * 3
+      var Steel_Iron_Ingot_Machines = Steel_Iron_Ingot
+
+      // Initialize the output string
+      var output = "";
+
+      // Check if there is an input for iron ingots
+      if (Iron_Ingot > 0) {
+        output += " To produce " + Iron_Ingot + " iron ingots, you will need " + Iron_Ore + " iron ores and " + Iron_Ingot_Machines + " machines. <br> hallo";
+      }
+
+      // Check if there is an input for copper ingots
+      if (Copper_Ingot > 0) {
+        output += " To produce " + Copper_Ingot + " copper ingots, you will need " + Copper_Ore + " copper ores and " + Copper_Ingot_Machines + " machines. ";
+      }
+
+      // Check if there is an input for steel
+      if (Steel > 0) {
+        output += " To produce " + Steel + " steel, you will need " + Steel_Iron_Ingot + " Iron ingots, " + Steel_Iron_Ore + " Iron ores and " + Steel_Machines + " Machines + " + Steel_Iron_Ingot_Machines + " machines for the iron ingots ";
+      }
+
+      // Display the grand total on the page
+      document.getElementById("total").innerHTML = output;
+    }     
+</script>
