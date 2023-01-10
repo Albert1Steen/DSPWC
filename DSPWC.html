@@ -42,7 +42,7 @@
         -webkit-appearance: none;
     }
     #total{
-      text-align: center;
+      text-align: left;
       font-size: 1.2em;
       margin-top: 20px;
     }
@@ -99,12 +99,12 @@
 
       // Check if there is an input for iron ingots
       if (Iron_Ingot > 0) {
-        output += " To produce " + Iron_Ingot + " iron ingots, you will need " + Iron_Ore + " iron ores and " + Iron_Ingot_Machines + " machines. <br> hallo";
+        output += " To produce " + Iron_Ingot + " iron ingots, you need: <br>-" + Iron_Ore + " iron ores and <br>-" + Iron_Ingot_Machines + " machines. <br>";
       }
 
       // Check if there is an input for copper ingots
       if (Copper_Ingot > 0) {
-        output += " To produce " + Copper_Ingot + " copper ingots, you will need " + Copper_Ore + " copper ores and " + Copper_Ingot_Machines + " machines. ";
+        output += " To produce " + Copper_Ingot + " copper ingots, you will need " + Copper_Ore + " copper ores and " + Copper_Ingot_Machines + " machines. <br>";
       }
 
       // Check if there is an input for steel
