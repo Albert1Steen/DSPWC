@@ -249,11 +249,12 @@ input[type="number"]::-webkit-outer-spin-button{
       // set the recipe for gear
       var Ge_M = Ge * 1;
       var Ge_Ir = Ge *1;
+      var Ge_Ir_M = Ge_Ir * 1;
       var Ge_Ir_Ore = Ge_Ir * 1;
       // set the recipe for magnetic coil
-      var MaC_M = Ma * 0.5;
-      var MaC_Ma = Ma * 1;
-      var MaC_Co = Ma * 0.5;
+      var MaC_M = MaC * 0.5;
+      var MaC_Ma = MaC * 1;
+      var MaC_Co = MaC * 0.5;
       var MaC_Ma_M = MaC_Ma * 1.5;
       var MaC_Ma_Ore = MaC_Ma * 1;
       var MaC_Co_M = MaC_Co * 1;
@@ -305,7 +306,6 @@ input[type="number"]::-webkit-outer-spin-button{
           var Hyf_Ti_Ore = HyF_Ti * 2;
           var HyF_Ti_M = HyF_Ti * 2;
 
-
       // Initialize the output string
       var output = "";
 
@@ -327,28 +327,28 @@ input[type="number"]::-webkit-outer-spin-button{
       }
       // Check sillicon ingots
       if (Si > 0) {
-        output += Si
+        output += Si + " Sillicon ingot " + Si_M + " Smelters <br>- " + Si_Ore + " Sillicon ore<br>"
       }
 
       // Check graphene rods
       if (GrR > 0) {
-        output += GrR
+        output += GrR + " Graphene rod " + GrR_M + " Smelters <br>- " + GrR_Ore + " Coal<br>"
       }    
       // Check diamonds
       if (Di > 0) {
-        output += Di
+        output += Di + " Diamond " + Di_M + " Smelters <br>- " + Di_Ore + " Kimberlite ore<br>"
       }
       // Check titanium ingot
       if (Ti > 0) {
-        output += Ti
+        output += Ti + " Titanium " + Ti_M + " Smelters <br>- " + Ti_Ore + " Titanium ore<br>" 
       }
       // Check brick
       if (Br > 0) {
-        output += Br
+        output += Br + " Brick " + Br_M + " Smelters <br>- " + Br_Ore + " Stone<br>"
       }
       // Check glass
       if (Gl > 0) {
-        output += Gl
+        output += Gl + " Glass " + Gl_M + " Smelters <br>- " + Gl_Ore + " Stone<br>"
       }
       // Check prism
       if (Pr > 0) {
@@ -356,15 +356,15 @@ input[type="number"]::-webkit-outer-spin-button{
       }
       // Check sillicon crystal
       if (SiC > 0) {
-        output += SiC
+        output += SiC + " Sillicon crystal " + SiC_M + " Smelters <br>- " + SiC_Ore + " Fractionated sillicon<br>"
       }
       // Check gear
       if (Ge > 0) {
-        output += Ge
+        output += Ge + " Gear " + Ge_M + " Assemblers<br>- " + Ge_Ir + " Iron ingot" + Ge_Ir_M + " Smelters <br>-- " + Ge_Ir_Ore + " Iron ore<br>"
       }
       // Check magnetic coil
       if (MaC > 0) {
-        output += MaC
+        output += MaC + " Magnetic coil " + MaC_M + " Assemblers<br>- " + MaC_Ma + " Magnet " + MaC_Ma_M + " Smelters<br>-- " + MaC_Ma_Ore + " Iron ore<br>- " + MaC_Co + " Copper ingot " + MaC_Co_M + " Smelters<br>-- " + MaC_Co_Ore + " Copper ore<br>" 
       }
       // Check circuit board
       if (Ci > 0) {
@@ -372,15 +372,15 @@ input[type="number"]::-webkit-outer-spin-button{
       }
       // Check mycrocrystalline component
       if (My > 0) {
-        output += My
+        output += My + " Mycrocrystalline component " + My_M + " Assemblers<br>- " + My_Co + " Copper ingot " + My_Co_M + " Smelter<br>-- " + My_Co_Ore + " Copper ore<br>- " + My_Si + " Sillicon ingot " + My_Si_M + " Smelters<br>-- " + My_Si_Ore + " Sillicon ore<br>"
       }
       // Check titanium crystal
       if (TiC > 0) {
-        output += TiC
+        output += TiC + " Titanium crystal " + TiC_M + " Assemblers<br>- " + TiC_Org + " Organic crystal<br>- " + TiC_Ti + " Titanium ingot " + TiC_Ti_M + " Smelters<br>-- " + TiC_Ti_Ore + " Titanium ore<br>" 
       }
       // Check photon combiner
       if (Ph > 0) {
-        output += Ph
+        output += Ph + " Photon combiner " + Ph_M + " Assemblers<br>- " + Ph_Opt + " Optical grading crystal<br>- " + Ph_Ci + " Circuit board " + Ph_Ci_M + " Assemblers<br>-- " + Ph_Ci_Co + " Copper ingot " + Ph_Ci_Co_M + " Smelters<br>--- " + Ph_Ci_Co_Ore + " Copper ore<br>-- " + Ph_Ci_Ir + " Iron ingot " + Ph_Ci_Ir_M + " Smelting<br>--- "+ Ph_Ci_Ir_Ore + " Iron ore<br>" 
       }
       // Check graphene (+hydrogen)
       if (Gr > 0) {
@@ -410,7 +410,7 @@ input[type="number"]::-webkit-outer-spin-button{
 redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/!HomePage.html");
 });
   buttons[1].addEventListener("click", function(){
-redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/1Low-Tier.html");
+redirectToURL("file:///C:/Users/Gebruiker/Documents/Visual%20studio%20code/1Low-Tier.html");
 });
   buttons[2].addEventListener("click", function(){
 redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/2Mid-Tier.html");
