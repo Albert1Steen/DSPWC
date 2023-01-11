@@ -1,0 +1,428 @@
+<style>
+  /* Add some styling for the header and menu */
+  body {
+      display: flex;
+      flex-direction: column;
+  }
+  h1 {
+      font-size: 3em;
+      text-align: center;
+      margin: 20px 0;
+      color: #006699;
+  }
+  #menu-container {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      background-color: black;
+      align-items: center;
+      justify-content: center;
+  }
+  .menu-button {
+      padding: 5px;
+      width: 70px;
+      margin: 5px 10px;
+      background-color: #441d1d;
+      border-radius: 50px;
+      text-align: center;
+      cursor: pointer;
+  }
+  .menu-button:hover {
+      background-color: #e6e6e6;
+  }
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+li span{
+  margin-right: 10px;
+  font-size: 1.1em;
+  width: 400px;
+  text-align: left;
+}
+input[type="number"]{
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #e6e6e6;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+#total{
+  text-align: left;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+  <h1>Low Tier Recources</h1>
+  <div id="menu-container">
+    <div class="menu-button">Home</div>
+    <div class="menu-button">Low Tier</div>
+    <div class="menu-button">Mid Tier</div>
+    <div class="menu-button">High Tier</div>
+    <div class="menu-button">Science</div>
+    <div class="menu-button">Buildings</div>
+  </div>
+
+<div class="main-content">
+    <ul>
+    <li>
+      <span>Iron Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ir">
+    </li>
+    <li>
+      <span>Steel</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="St">
+    </li>
+    <li>
+      <span>Magnet</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ma">
+    </li>
+    <li>
+      <span>Copper Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Co">
+    </li>
+    <li>
+      <span>Sillicon Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Si">
+    </li>
+    <li>
+      <span>Graphite Rod</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="GrR">
+    </li>
+    <li>
+      <span>Diamond</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Di">
+    </li>
+    <li>
+      <span>Titanium Ingot</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ti">
+    </li>
+    <li>
+      <span>Bricks</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Br">
+    </li>
+    <li>
+      <span>Glass</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Gl">
+    </li>
+    <li>
+      <span>Prism</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Pr">
+    </li>
+    <li>
+      <span>Crystal Sillicon</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="SiC">
+    </li>
+    <li>
+      <span>Gear</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ge">
+    </li>
+    <li>
+      <span>Magnetic Coil</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="MaC">
+    </li>
+    <li>
+      <span>Circuit Board</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ci">
+    </li>
+    <li>
+      <span>Mycrocristaline Component</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="My">
+    </li>
+    <li>
+      <span>Titanium Crystal</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="TiC">
+    </li>
+    <li>
+      <span>Photon Combiner</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ph">
+    </li>
+    <li>
+      <span>Graphene (+hydrogen)</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Gr">
+    </li>
+    <li>
+      <span>Carbon nanotube</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ca">
+    </li>
+    <li>
+      <span>Hydrogen Fuel Rod</span>
+      <input type="number" placeholder="Amount" onchange="calculateTotal()" id="HyF">
+    </li>
+  </ul>
+  
+  <div id="total"></div>
+
+  <script>
+    function calculateTotal(){
+      var Ir = document.getElementById("Ir").value;
+      var St = document.getElementById("St").value;
+      var Ma = document.getElementById("Ma").value;
+      var Co = document.getElementById("Co").value;
+      var Si = document.getElementById("Si").value;
+      var GrR = document.getElementById("GrR").value;
+      var Di = document.getElementById("Di").value;
+      var Ti = document.getElementById("Ti").value;
+      var Br = document.getElementById("Br").value;
+      var Gl = document.getElementById("Gl").value;
+      var Pr = document.getElementById("Pr").value;
+      var SiC = document.getElementById("SiC").value;
+      var Ge = document.getElementById("Ge").value;
+      var MaC = document.getElementById("MaC").value;
+      var Ci = document.getElementById("Ci").value;
+      var My = document.getElementById("My").value;
+      var TiC = document.getElementById("TiC").value;
+      var Ph = document.getElementById("Ph").value;
+      var Gr = document.getElementById("Gr").value;
+      var Ca = document.getElementById("Ca").value;
+      var HyF = document.getElementById("HyF").value;
+
+
+      // Set recipes, amount of machines are time of recipe (recipe takes 3 seconds, it takes 3 machines for 1 output/s)
+      // Set recipes, resource is per 1 item output (1 iron ore for 1 iron ingot, 3 iron ingot for 1 steel)
+      // set the recipe for iron ingots
+      var Ir_Ore = Ir * 1;
+      var Ir_M = Ir * 1;
+      // set the recipe for steel
+      var St_Ir = St * 3;
+      var St_Ir_Ore = St_Ir;
+      var St_M = St * 3;
+      var St_Ir_M = St_Ir;
+      // set the recipe for magnets
+      var Ma_Ore = Ma *1;
+      var Ma_M = Ma * 1.5;
+      // set the recipe for copper ingots
+      var Co_M = Co * 1;      
+      var Co_Ore = Co * 1;
+      // set the recipe for sillicon ingots
+      var Si_M = Si * 2;
+      var Si_Ore = Si * 2;
+      // set the recipe for graphene rods
+      var GrR_Ore = GrR * 2;
+      var GrR_M = GrR * 2;
+      // set the recipe for diamonds
+      var Di_Ore = Di * 0.5;
+      var Di_M = Di * 0.75;
+      // set the recipe for titanium ingot
+      var Ti_Ore = Ti * 2;
+      var Ti_M = Ti * 2
+      // set the recipe for brick
+      var Br_Ore = Br * 1;
+      var Br_M = Br * 1;
+      // set the recipe for glass
+      var Gl_Ore = Gl * 2;
+      var Gl_M = Gl * 2;
+      // set the recipe for prism
+      var Pr_M = Pr * 1;
+      var Pr_Gl = Pr * 1.5;
+      var Pr_Gl_M = Pr_Gl * 2; 
+      var Pr_Gl_Ore = Pr_Gl * 2;
+      // set the recipe for sillicon crystal
+      var SiC_M = SiC * 0.75;
+      var SiC_Ore = SiC * 0.5;
+      // set the recipe for gear
+      var Ge_M = Ge * 1;
+      var Ge_Ir = Ge *1;
+      var Ge_Ir_Ore = Ge_Ir * 1;
+      // set the recipe for magnetic coil
+      var MaC_M = Ma * 0.5;
+      var MaC_Ma = Ma * 1;
+      var MaC_Co = Ma * 0.5;
+      var MaC_Ma_M = MaC_Ma * 1.5;
+      var MaC_Ma_Ore = MaC_Ma * 1;
+      var MaC_Co_M = MaC_Co * 1;
+      var MaC_Co_Ore = MaC_Co * 1;
+      // set the recipe for circuit board
+      var Ci_M = Ci * 0.5;
+      var Ci_Ir = Ci * 1;
+          var Ci_Ir_M = Ci_Ir * 1;
+          var Ci_Ir_Ore = Ci_Ir * 1;        
+        var Ci_Co = Ci * 0.5;
+          var Ci_Co_M = Ci_Co * 1;
+          var Ci_Co_Ore = Ci_Co * 1;
+      // set the recipe for mycrocrystalline component
+      var My_M = My * 2;
+        var My_Si = My * 2;
+         var My_Si_M = My_Si * 2;
+         var My_Si_Ore = My_Si * 2;        
+       var My_Co = My * 1;
+         var My_Co_M = My_Co * 1;
+         var My_Co_Ore = My_Co * 1;
+      // set the recipe for titanium crystal
+      var TiC_M = TiC * 4;
+        var TiC_Org = TiC * 1;
+        var TiC_Ti = TiC * 4;
+         var TiC_Ti_M = TiC_Ti * 2;
+         var TiC_Ti_Ore = TiC_Ti * 2;
+      // set the recipe for photon combiner
+      var Ph_M = Ph * 3;
+        var Ph_Opt = Ph * 1;
+        var Ph_Ci = Ph * 1;
+         var Ph_Ci_M = Ph_Ci * 0.5;
+         var Ph_Ci_Ir = Ph_Ci * 1;
+           var Ph_Ci_Ir_M = Ph_Ci_Ir * 1;
+           var Ph_Ci_Ir_Ore = Ph_Ci_Ir * 1;        
+         var Ph_Ci_Co = Ph_Ci * 0.5;
+           var Ph_Ci_Co_M = Ph_Ci_Co * 1;
+           var Ph_Ci_Co_Ore = Ph_Ci_Co * 1;
+      // set the recipe for graphene (+hydrogen)
+      var Gr_M = Gr * 1;
+      var Gr_Hy = Gr * 0.5;
+        var Gr_Fi = Gr * 1;
+      // set the recipe for carbon nanotube
+      var Ca_M = Ca * 2;
+      var Ca_Spi = Ca * 3;
+      // set the recipe for hydrogen fuel rod
+      var HyF_M = HyF * 3;
+        var HyF_Hy = HyF * 5;
+        var HyF_Ti = HyF * 0.5;
+          var Hyf_Ti_Ore = HyF_Ti * 2;
+          var HyF_Ti_M = HyF_Ti * 2;
+
+
+      // Initialize the output string
+      var output = "";
+
+      // Check Iron Ingots
+      if (Ir > 0) {
+        output += Ir + " Iron ingot " + Ir_M + " Smelters <br>- " + Ir_Ore + " Iron ore<br>" ;
+      }
+      // Check Steel
+      if (St > 0) {
+        output += St + " Steel " + St_M + " Smelters <br>- "+ St_Ir + " Iron ingot " + St_Ir_M + " Smelters <br>-- "+ St_Ir_Ore + " Iron ore<br>";
+      }   
+      // Check Magnets
+      if (Ma > 0) {
+        output += Ma + " Magnet " + Ma_M + " Smelters <br>- " + Ma_Ore + " Iron ore<br>" 
+      }
+      // Check Copper Ingots
+      if (Co > 0) {
+        output += Co + " Copper ingot " + Co_M + " Smelters <br>- "+ Co_Ore + " Copper ore<br>" ;
+      }
+      // Check sillicon ingots
+      if (Si > 0) {
+        output += Si
+      }
+
+      // Check graphene rods
+      if (GrR > 0) {
+        output += GrR
+      }    
+      // Check diamonds
+      if (Di > 0) {
+        output += Di
+      }
+      // Check titanium ingot
+      if (Ti > 0) {
+        output += Ti
+      }
+      // Check brick
+      if (Br > 0) {
+        output += Br
+      }
+      // Check glass
+      if (Gl > 0) {
+        output += Gl
+      }
+      // Check prism
+      if (Pr > 0) {
+        output += Pr + " Prism " + Pr_M + " Assemblers <br>- "+ Pr_Gl + " Glass " + Pr_Gl_M + " Smelters<br>-- " + Pr_Gl_Ore + " Stone <br>" ;
+      }
+      // Check sillicon crystal
+      if (SiC > 0) {
+        output += SiC
+      }
+      // Check gear
+      if (Ge > 0) {
+        output += Ge
+      }
+      // Check magnetic coil
+      if (MaC > 0) {
+        output += MaC
+      }
+      // Check circuit board
+      if (Ci > 0) {
+        output += Ci + " Circuit board " + Ci_M + " Assemblers<br>- " + Ci_Ir + " Iron ingot " + Ci_Ir_M + " Smelters<br>-- " + Ci_Ir_Ore + " Iron ore <br>- " + Ci_Co + " Copper ingot " + Ci_Co_M + " Smelters <br>-- " + Ci_Co_Ore + " Copper ore <br>" 
+      }
+      // Check mycrocrystalline component
+      if (My > 0) {
+        output += My
+      }
+      // Check titanium crystal
+      if (TiC > 0) {
+        output += TiC
+      }
+      // Check photon combiner
+      if (Ph > 0) {
+        output += Ph
+      }
+      // Check graphene (+hydrogen)
+      if (Gr > 0) {
+        output += Gr
+      }
+      // Check carbon nanotube
+      if (Ca > 0) {
+        output += Ca
+      }
+      // Check hydrogen fuel rod
+      if (HyF > 0) {
+        output += HyF
+      }
+    
+      // Display the grand total on the page
+      document.getElementById("total").innerHTML = output;
+    }     
+</script>
+
+<script>
+  function redirectToURL(url) {
+    window.location.href = url;
+}
+
+  const buttons = document.querySelectorAll(".menu-button");
+  buttons[0].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/!HomePage.html");
+});
+  buttons[1].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/1Low-Tier.html");
+});
+  buttons[2].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/2Mid-Tier.html");
+});
+  buttons[3].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/3High-Tier.html");
+});
+  buttons[4].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/4Science.html");
+});
+  buttons[5].addEventListener("click", function(){
+redirectToURL("file:///C:/Users/ja/Documents/Python/Dyson_Sphere_Calculator/Website/Sandbox/5Buildings.html");
+});
+
+</script>
