@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Low Tier Recources</h1>
+  <div id="menu-container">
+    <div class="menu-button">Home</div>
+    <div class="menu-button">Low Tier</div>
+    <div class="menu-button">Mid Tier</div>
+    <div class="menu-button">High Tier</div>
+    <div class="menu-button">Science</div>
+    <div class="menu-button">Buildings</div>
+  </div>
+
+  <div id="Top-bottom-container">
+    <button onclick="scrollToBottom()" class="Top-bottom-button">Go to bottom</button>
+  </div>
+  
+  <div class="main-content">
+
+    <ul>
+      <li>
+        <span>Iron Ingot</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ir">
+      </li>
+      <li>
+        <span>Steel</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="St">
+      </li>
+      <li>
+        <span>Magnet</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ma">
+      </li>
+      <li>
+        <span>Copper Ingot</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Co">
+      </li>
+      <li>
+        <span>Sillicon Ingot</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Si">
+      </li>
+      <li>
+        <span>Graphite Rod</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="GrR">
+      </li>
+      <li>
+        <span>Diamond</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Di">
+      </li>
+      <li>
+        <span>Titanium Ingot</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ti">
+      </li>
+      <li>
+        <span>Bricks</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Br">
+      </li>
+      <li>
+        <span>Glass</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Gl">
+      </li>
+      <li>
+        <span>Prism</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Pr">
+      </li>
+      <li>
+        <span>Crystal Sillicon</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="SiC">
+      </li>
+      <li>
+        <span>Gear</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ge">
+      </li>
+      <li>
+        <span>Magnetic Coil</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="MaC">
+      </li>
+      <li>
+        <span>Circuit Board</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ci">
+      </li>
+      <li>
+        <span>Mycrocristaline Component</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="My">
+      </li>
+      <li>
+        <span>Titanium Crystal</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="TiC">
+      </li>
+      <li>
+        <span>Photon Combiner</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ph">
+      </li>
+      <li>
+        <span>Graphene (+hydrogen)</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Gr">
+      </li>
+      <li>
+        <span>Carbon nanotube</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="Ca">
+      </li>
+      <li>
+        <span>Hydrogen Fuel Rod</span>
+        <input type="number" placeholder="Amount" onchange="calculateTotal()" id="HyF">
+      </li>
+    </ul>
+    
+      <div id="Top-bottom-container">
+    <button onclick="scrollToTop()" class="Top-bottom-button">Go to Top</button>
+  </div>
+  
+    <div id="total"></div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
